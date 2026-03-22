@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once __DIR__ . '/functions.php';
 
@@ -13,11 +14,13 @@ if ($acao && $id !== null && isset($tarefas[$id])) {
 
     if ($acao === 'concluir') {
         $tarefas[$id]['status'] = 'concluida';
+          $_SESSION['mensagem'] = "Tarefa concluída!";
     }
 
     if ($acao === 'remover') {
         unset($tarefas[$id]);
         $tarefas = array_values($tarefas);
+            $_SESSION['mensagem'] = "Tarefa removida!";
     }
 
     salvarTarefas($tarefas);
@@ -67,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (isset($tarefas[$id]) && !empty($titulo)) {
             $tarefas[$id]['titulo'] = $titulo;
+              $_SESSION['mensagem'] = "Tarefa atualizada!";
         }
 
     } else {
@@ -87,8 +91,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     "titulo" => $titulo,
                     "status" => "pendente"
                 ];
+                 $_SESSION['mensagem'] = "Tarefa adicionada!";
             }
         }
+        
     }
 
     salvarTarefas($tarefas);
