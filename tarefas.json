@@ -1,14 +1,18 @@
 [
     {
+        "titulo": "Terminar Portfolio",
+        "status": "concluida"
+    },
+    {
         "titulo": "Estudar PHP",
         "status": "concluida"
     },
     {
-        "titulo": "Fazer projeto",
-        "status": "pendente"
+        "titulo": "Estudar Laravel",
+        "status": "concluida"
     },
     {
-        "titulo": "Aprender Arrays",
+        "titulo": "Testando Update",
         "status": "pendente"
     }
 ]
