@@ -69,5 +69,3 @@ echo "<ul>";
 foreach ($tarefas as $tarefa) {
     echo "<li>{$tarefa['titulo']} - {$tarefa['status']}</li>";
 }
-
-echo "</ul>";
