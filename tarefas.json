@@ -1,0 +1,14 @@
+[
+    {
+        "titulo": "Estudar PHP",
+        "status": "concluida"
+    },
+    {
+        "titulo": "Fazer projeto",
+        "status": "pendente"
+    },
+    {
+        "titulo": "Aprender Arrays",
+        "status": "pendente"
+    }
+]
